@@ -8,7 +8,7 @@
       </mat-card-header>
       <img mat-card-image *ngIf="coder.logo else nopic;" [src]="coder.logo"/>
       <mat-card-content>
-      <h3 *ngIf="coder.bio else none;">Bio: {{ coder.bio }}</h3>
+      <h3 *ngIf="coder.bio else none;">Bio: <br>{{ coder.bio }}</h3>
       <pre>{{coder._id | json}}</pre>
       </mat-card-content>
       <mat-card-actions>
@@ -26,7 +26,7 @@
       </mat-card-header>
       <img mat-card-image *ngIf="cret.logo else nopic;" [src]="cret.logo"/>
       <mat-card-content>
-        <h3 *ngIf="cret.bio else none;">Bio: {{ cret.bio }}</h3>
+        <h3 *ngIf="cret.bio else none;">Bio: <br>{{ cret.bio }}</h3>
         <pre>{{cret._id | json}}</pre>
       </mat-card-content>
       <mat-card-actions>
@@ -44,7 +44,7 @@
       </mat-card-header>
       <img mat-card-image *ngIf="caleb.logo else nopic;" [src]="caleb.logo"/>
       <mat-card-content>
-        <h3 *ngIf="caleb.bio else none;">Bio: {{ caleb.bio }}</h3>
+        <h3 *ngIf="caleb.bio else none;">Bio: <br>{{ caleb.bio }}</h3>
         <pre>{{caleb._id | json}}</pre>
       </mat-card-content>
       <mat-card-actions>
