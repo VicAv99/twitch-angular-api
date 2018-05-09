@@ -1,9 +1,61 @@
-<mat-tab-group>
-  <mat-tab label="Tab 1">Content 1</mat-tab>
-  <mat-tab label="Tab 2">Content 2</mat-tab>
+<mat-tab-group color="accent">
+  <!-- USER: freecodecamp -->
+  <mat-tab label="freeCodeCamp">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title><h2>TWITCH USER:</h2></mat-card-title>
+        <mat-card-subtitle><h3>{{ coder.display_name }}</h3></mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image *ngIf="coder.logo else nopic;" [src]="coder.logo"/>
+      <mat-card-content>
+      <h3 *ngIf="coder.bio else none;">Bio: {{ coder.bio }}</h3>
+      <pre>{{coder._id | json}}</pre>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Account</button>
+        <button mat-raised-button color="accent">Stream</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-tab>
+  <!-- USER: cretetion -->
+  <mat-tab label="Cretetion">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title><h2>TWITCH USER:</h2></mat-card-title>
+        <mat-card-subtitle><h3>{{ cret.display_name }}</h3></mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image *ngIf="cret.logo else nopic;" [src]="cret.logo"/>
+      <mat-card-content>
+        <h3 *ngIf="cret.bio else none;">Bio: {{ cret.bio }}</h3>
+        <pre>{{cret._id | json}}</pre>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Account</button>
+        <button mat-raised-button color="accent">Stream</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-tab>
+  <!-- USER: caleb -->
+  <mat-tab label="RobotCaleb">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title><h2>TWITCH USER:</h2></mat-card-title>
+        <mat-card-subtitle><h3>{{ caleb.display_name }}</h3></mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image *ngIf="caleb.logo else nopic;" [src]="caleb.logo"/>
+      <mat-card-content>
+        <h3 *ngIf="caleb.bio else none;">Bio: {{ caleb.bio }}</h3>
+        <pre>{{caleb._id | json}}</pre>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Account</button>
+        <button mat-raised-button color="accent">Stream</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-tab>
 </mat-tab-group>
 
-<div class="cards-wrapper">
+<!-- <div class="cards-wrapper">
   <mat-card>
     <mat-card-header>
       <mat-icon mat-card-avatar>account_circle</mat-icon>
@@ -53,8 +105,8 @@
       <button mat-raised-button color="primary">Account</button>
       <button mat-raised-button color="accent">Stream</button>
     </mat-card-actions>
-  </mat-card>
-</div>
+  </mat-card> -->
+<!-- </div> -->
 
 <ng-template #none>
   <h3>No bio</h3>
