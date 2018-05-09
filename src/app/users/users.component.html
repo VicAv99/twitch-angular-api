@@ -1,26 +1,60 @@
-<h1>Twitch API App</h1>
-<img *ngIf="coder.logo else nopic;" [src]="coder.logo"/>
-<h3>Username: {{ coder.display_name }}</h3>
-<h3 *ngIf="coder.bio else none;">Bio: {{ coder.bio }}</h3>
-<pre>{{coder._id | json}}</pre>
+<mat-tab-group>
+  <mat-tab label="Tab 1">Content 1</mat-tab>
+  <mat-tab label="Tab 2">Content 2</mat-tab>
+</mat-tab-group>
 
-<h1>Twitch API App</h1>
-<img *ngIf="cret.logo else nopic;" [src]="cret.logo"/>
-<h3>Username: {{ cret.display_name }}</h3>
-<h3 *ngIf="cret.bio else none;">Bio: {{ cret.bio }}</h3>
-<pre>{{cret._id | json}}</pre>
+<div class="cards-wrapper">
+  <mat-card>
+    <mat-card-header>
+      <mat-icon mat-card-avatar>account_circle</mat-icon>
+      <mat-card-title><h2>TWITCH USER</h2></mat-card-title>
+      <mat-card-subtitle><h3>{{ coder.display_name }}</h3></mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image *ngIf="coder.logo else nopic;" [src]="coder.logo"/>
+    <mat-card-content>
+    <h3 *ngIf="coder.bio else none;">Bio: {{ coder.bio }}</h3>
+    <pre>{{coder._id | json}}</pre>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Account</button>
+      <button mat-raised-button color="accent">Stream</button>
+    </mat-card-actions>
+  </mat-card>
 
-<h1>Twitch API App</h1>
-<img *ngIf="noob.logo else nopic;" [src]="noob.logo"/>
-<h3>Username: {{ noob.display_name }}</h3>
-<h3 *ngIf="noob.bio else none;">Bio: {{ noob.bio }}</h3>
-<pre>{{noob._id | json}}</pre>
+  <mat-card>
+    <mat-card-header>
+      <mat-icon mat-card-avatar>account_circle</mat-icon>
+      <mat-card-title><h2>TWITCH USER</h2></mat-card-title>
+      <mat-card-subtitle><h3>{{ cret.display_name }}</h3></mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image *ngIf="cret.logo else nopic;" [src]="cret.logo"/>
+    <mat-card-content>
+      <h3 *ngIf="cret.bio else none;">Bio: {{ cret.bio }}</h3>
+      <pre>{{cret._id | json}}</pre>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Account</button>
+      <button mat-raised-button color="accent">Stream</button>
+    </mat-card-actions>
+  </mat-card>
 
-<h1>Twitch API App</h1>
-<img *ngIf="caleb.logo else nopic;" [src]="caleb.logo"/>
-<h3>Username: {{ caleb.display_name }}</h3>
-<h3 *ngIf="caleb.bio else none;">Bio: {{ caleb.bio }}</h3>
-<pre>{{caleb._id | json}}</pre>
+  <mat-card>
+    <mat-card-header>
+      <mat-icon mat-card-avatar>account_circle</mat-icon>
+      <mat-card-title><h2>TWITCH USER</h2></mat-card-title>
+      <mat-card-subtitle><h3>{{ caleb.display_name }}</h3></mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image *ngIf="caleb.logo else nopic;" [src]="caleb.logo"/>
+    <mat-card-content>
+      <h3 *ngIf="caleb.bio else none;">Bio: {{ caleb.bio }}</h3>
+      <pre>{{caleb._id | json}}</pre>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Account</button>
+      <button mat-raised-button color="accent">Stream</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
 
 <ng-template #none>
   <h3>No bio</h3>
