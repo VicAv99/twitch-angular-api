@@ -1,3 +1,31 @@
-<p>
-  users works!
-</p>
+<h1>Twitch API App</h1>
+<img *ngIf="coder.logo else nopic;" [src]="coder.logo"/>
+<h3>Username: {{ coder.display_name }}</h3>
+<h3 *ngIf="coder.bio else none;">Bio: {{ coder.bio }}</h3>
+<pre>{{coder._id | json}}</pre>
+
+<h1>Twitch API App</h1>
+<img *ngIf="cret.logo else nopic;" [src]="cret.logo"/>
+<h3>Username: {{ cret.display_name }}</h3>
+<h3 *ngIf="cret.bio else none;">Bio: {{ cret.bio }}</h3>
+<pre>{{cret._id | json}}</pre>
+
+<h1>Twitch API App</h1>
+<img *ngIf="noob.logo else nopic;" [src]="noob.logo"/>
+<h3>Username: {{ noob.display_name }}</h3>
+<h3 *ngIf="noob.bio else none;">Bio: {{ noob.bio }}</h3>
+<pre>{{noob._id | json}}</pre>
+
+<h1>Twitch API App</h1>
+<img *ngIf="caleb.logo else nopic;" [src]="caleb.logo"/>
+<h3>Username: {{ caleb.display_name }}</h3>
+<h3 *ngIf="caleb.bio else none;">Bio: {{ caleb.bio }}</h3>
+<pre>{{caleb._id | json}}</pre>
+
+<ng-template #none>
+  <h3>No bio</h3>
+</ng-template>
+
+<ng-template #nopic>
+    <img src="../../assets/rad.png">
+</ng-template>
